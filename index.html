@@ -1,17 +1,224 @@
-
 <!doctype html>
-<html lang="pt">
+<html lang="pt-BR">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="jonas">
-    <meta name="generator" content="Hugo 0.79.0">
-    <title>Test GitHub Pages</title>
-
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Jonas Pereira de Oliveira — Software Engineer & Data Scientist. Portfólio e currículo."
+    />
+    <meta name="author" content="Jonas Pereira de Oliveira" />
+    <title>Jonas Oliveira — Software Engineer</title>
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-      <h1><a href="tivo/index.html">Click</a></h1>
+    <!-- ===== NAV ===== -->
+    <nav>
+      <div class="nav-inner">
+        <span class="nav-logo">jonas<span>.</span></span>
+        <ul class="nav-links">
+          <li><a href="#experience">Experiência</a></li>
+          <li><a href="#education">Formação</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#projects">Projetos</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+      <div class="container">
+        <p class="hero-eyebrow">Olá, eu sou</p>
+        <h1 class="hero-name">Jonas Pereira<br />de Oliveira</h1>
+        <p class="hero-title">Software Engineer · Data Scientist</p>
+        <p class="hero-about">
+          Graduado em Ciência de Dados e Inteligência Artificial, com
+          experiência em desenvolvimento de software utilizando JavaScript e
+          Python, construção de sistemas backend, modelagem de dados e
+          desenvolvimento de soluções voltadas à resolução de problemas. Tenho
+          facilidade para aprendizado contínuo, trabalho colaborativo e
+          discussão de melhorias técnicas e de produto.
+        </p>
+        <div class="hero-links">
+          <a class="btn btn-primary" href="#projects">Ver projetos</a>
+          <a
+            class="btn btn-outline"
+            href="https://github.com/withoutcoffee"
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub ↗
+          </a>
+          <a
+            class="btn btn-outline"
+            href="https://www.linkedin.com/in/jonas-p-oliveira"
+            target="_blank"
+            rel="noopener"
+          >
+            LinkedIn ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTATO ===== -->
+    <section id="contact" style="padding-top: 0; padding-bottom: 56px">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-item">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">
+              <a
+                href="https://github.com/withoutcoffee"
+                target="_blank"
+                rel="noopener"
+                >@withoutcoffee</a
+              >
+            </span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">
+              <a
+                href="https://www.linkedin.com/in/jonas-p-oliveira"
+                target="_blank"
+                rel="noopener"
+                >Jonas P Oliveira</a
+              >
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIÊNCIA ===== -->
+    <section id="experience" style="border-top: 1px solid var(--border)">
+      <div class="container">
+        <h2 class="section-title">Experiência</h2>
+        <div id="experience-timeline" class="timeline">
+          <!-- renderizado por js/main.js a partir de js/experience.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FORMAÇÃO ===== -->
+    <section id="education">
+      <div class="container">
+        <h2 class="section-title">Formação</h2>
+        <div id="education-grid" class="edu-grid">
+          <!-- renderizado por js/main.js a partir de js/education.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HABILIDADES ===== -->
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title">Habilidades</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <p class="skill-category">Linguagens & Backend</p>
+            <div class="skill-items">
+              <span class="tag">Python</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">REST API</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <p class="skill-category">Bancos de Dados</p>
+            <div class="skill-items">
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Redis</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Prisma ORM</span>
+              <span class="tag">Alembic</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <p class="skill-category">Dados & Análise</p>
+            <div class="skill-items">
+              <span class="tag">Pandas</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">Plotly</span>
+              <span class="tag">Matplotlib</span>
+              <span class="tag">Streamlit</span>
+              <span class="tag">Looker Studio</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <p class="skill-category">Frontend</p>
+            <div class="skill-items">
+              <span class="tag">React</span>
+              <span class="tag">React Native</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <p class="skill-category">Ferramentas & DevOps</p>
+            <div class="skill-items">
+              <span class="tag">Git</span>
+              <span class="tag">GitFlow</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Tmux</span>
+              <span class="tag">SSH</span>
+              <span class="tag">Coolify</span>
+              <span class="tag">Dokploy</span>
+              <span class="tag">VPS</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <p class="skill-category">Competências</p>
+            <div class="skill-items">
+              <span class="tag">Resolução de Problemas</span>
+              <span class="tag">Raciocínio Lógico</span>
+              <span class="tag">Análise de Dados</span>
+              <span class="tag">Machine Learning</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJETOS ===== -->
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Projetos</h2>
+        <div id="projects-grid" class="projects-grid">
+          <!-- renderizado por js/main.js a partir de js/projects.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <div class="container">
+        <p>
+          Feito por
+          <a
+            href="https://github.com/withoutcoffee"
+            target="_blank"
+            rel="noopener"
+            >Jonas Oliveira</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/experience.js"></script>
+    <script src="js/education.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

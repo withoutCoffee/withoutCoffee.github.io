@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descrição do projeto">
+  <title>Nome do Projeto — Jonas Oliveira</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .project-page { max-width: 720px; margin: 0 auto; padding: 56px 24px 80px; }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-bottom: 40px;
+      transition: color var(--transition);
+    }
+    .back-link:hover { color: var(--accent); text-decoration: none; }
+    .project-header { margin-bottom: 40px; }
+    .project-page-icon { font-size: 2.4rem; margin-bottom: 16px; display: block; }
+    .project-page-title {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .project-page-summary {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+    .project-body { color: #bbb; line-height: 1.8; }
+    .project-body h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 36px 0 12px;
+    }
+    .project-body p { margin-bottom: 16px; }
+    .project-body ul { padding-left: 20px; margin-bottom: 16px; }
+    .project-body li { margin-bottom: 6px; }
+    .project-body a { color: var(--accent); }
+    .project-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; }
+    hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <span class="nav-logo">jonas<span>.</span></span>
+    </div>
+  </nav>
+
+  <div class="project-page">
+
+    <a class="back-link" href="../index.html#projects">← Voltar aos projetos</a>
+
+    <header class="project-header">
+      <!-- Substitua o emoji pelo que representar seu projeto -->
+      <span class="project-page-icon">🚀</span>
+
+      <!-- Título do projeto -->
+      <h1 class="project-page-title">Nome do Projeto</h1>
+
+      <!-- Resumo de uma linha -->
+      <p class="project-page-summary">
+        Breve descrição do que o projeto faz e qual problema ele resolve.
+      </p>
+
+      <!-- Tags de tecnologia -->
+      <div class="project-meta tag-list">
+        <span class="tag">Python</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">PostgreSQL</span>
+      </div>
+    </header>
+
+    <hr>
+
+    <!-- Corpo do projeto — escreva livremente aqui -->
+    <div class="project-body">
+
+      <h2>Sobre o projeto</h2>
+      <p>
+        Descreva o contexto e a motivação para criar este projeto.
+        O que ele resolve? Por que foi necessário?
+      </p>
+
+      <h2>O que foi desenvolvido</h2>
+      <ul>
+        <li>Feature ou funcionalidade 1</li>
+        <li>Feature ou funcionalidade 2</li>
+        <li>Feature ou funcionalidade 3</li>
+      </ul>
+
+      <h2>Tecnologias utilizadas</h2>
+      <p>
+        Explique as escolhas técnicas: por que usou determinadas ferramentas,
+        bibliotecas, banco de dados etc.
+      </p>
+
+      <h2>Aprendizados</h2>
+      <p>
+        O que você aprendeu ou o que foi desafiador neste projeto?
+      </p>
+
+    </div>
+
+    <hr>
+
+    <!-- Botões de ação -->
+    <div class="project-links">
+      <!-- Remova os que não se aplicar -->
+      <a class="btn btn-primary" href="https://github.com/withoutcoffee/seu-repositorio" target="_blank" rel="noopener">
+        Ver no GitHub ↗
+      </a>
+      <a class="btn btn-outline" href="https://link-do-deploy.com" target="_blank" rel="noopener">
+        Ver deploy ↗
+      </a>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>
+        <a href="../index.html">← Jonas Oliveira</a>
+        &nbsp;·&nbsp;
+        <a href="mailto:jonasbdc1998@gmail.com">jonasbdc1998@gmail.com</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
