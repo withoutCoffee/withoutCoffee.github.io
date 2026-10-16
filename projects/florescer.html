@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sistema de acompanhamento do Programa Florescer da Prefeitura de Bodocó — frequência, serviço comunitário, saúde e formação profissional das beneficiárias.">
+  <title>Programa Florescer — Jonas Oliveira</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .project-page { max-width: 720px; margin: 0 auto; padding: 56px 24px 80px; }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-bottom: 40px;
+      transition: color var(--transition);
+    }
+    .back-link:hover { color: var(--accent); text-decoration: none; }
+    .project-header { margin-bottom: 40px; }
+    .project-page-icon { font-size: 2.4rem; margin-bottom: 16px; display: block; }
+    .project-page-title {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .project-page-summary {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+    .project-body { color: #bbb; line-height: 1.8; }
+    .project-body h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 36px 0 12px;
+    }
+    .project-body p { margin-bottom: 16px; }
+    .project-body ul { padding-left: 20px; margin-bottom: 16px; }
+    .project-body li { margin-bottom: 6px; }
+    .project-body a { color: var(--accent); }
+    .project-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; }
+    hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <span class="nav-logo">jonas<span>.</span></span>
+    </div>
+  </nav>
+
+  <div class="project-page">
+
+    <a class="back-link" href="../index.html#projects">← Voltar aos projetos</a>
+
+    <header class="project-header">
+      <span class="project-page-icon">🌻</span>
+
+      <h1 class="project-page-title">Programa Florescer</h1>
+
+      <p class="project-page-summary">
+        Sistema de acompanhamento do programa social da Prefeitura de Bodocó — PE, em
+        parceria com a Secretaria de Meio Ambiente: frequência, qualidade do serviço
+        comunitário, saúde e formação profissional das beneficiárias.
+      </p>
+
+      <div class="project-meta tag-list">
+        <span class="tag">Node.js</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">React</span>
+        <span class="tag">Prisma ORM</span>
+        <span class="tag">PostgreSQL</span>
+      </div>
+    </header>
+
+    <hr>
+
+    <div class="project-body">
+
+      <h2>Sobre o projeto</h2>
+      <p>
+        O Programa Florescer é uma iniciativa da Prefeitura Municipal de Bodocó com a
+        Secretaria de Meio Ambiente em que mulheres do município prestam serviço
+        comunitário de limpeza urbana e recebem um benefício social municipal. Mais do que
+        a contrapartida financeira, o programa acompanha a saúde e a qualificação
+        profissional das participantes — <em>cuidado, inclusão e desenvolvimento
+        sustentável para as mulheres de Bodocó</em>.
+      </p>
+      <p>
+        Antes do sistema, frequência, exames e cursos eram controlados em listas separadas,
+        o que dificultava saber a situação completa de uma beneficiária e justificar o
+        pagamento do benefício. O sistema reúne tudo isso em um acompanhamento único.
+      </p>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="../assets/florescer-home.png"
+               alt="Página inicial do Programa Florescer com o lema do programa"
+               loading="lazy">
+          <figcaption>Página inicial do sistema — Secretaria de Meio Ambiente · Coordenadoria do Programa Florescer.</figcaption>
+        </figure>
+      </div>
+
+      <h2>O que foi desenvolvido</h2>
+      <ul>
+        <li>Cadastro das beneficiárias e vínculo com as frentes de serviço comunitário.</li>
+        <li>Registro e acompanhamento de frequência, base para a concessão do benefício.</li>
+        <li>Avaliação da qualidade do serviço prestado em cada frente de limpeza.</li>
+        <li>Acompanhamento de exames médicos, com controle das datas e da situação de saúde de cada participante.</li>
+        <li>Registro da formação profissional — minicursos e workshops oferecidos pelo programa.</li>
+        <li>Visão consolidada por beneficiária, reunindo frequência, saúde e formação.</li>
+      </ul>
+
+      <h2>Tecnologias utilizadas</h2>
+      <p>
+        Backend em <strong>Node.js com TypeScript</strong>, com <strong>Prisma ORM</strong>
+        sobre <strong>PostgreSQL</strong> e frontend em <strong>React</strong> — a mesma stack
+        padrão que adoto nos demais sistemas, o que reduz o custo de manter vários projetos
+        em paralelo. A escolha por uma interface web se deu porque o
+        registro acontece em contextos diferentes — na coordenadoria, no campo e no
+        acompanhamento de saúde — e precisava funcionar em qualquer dispositivo, sem
+        instalação.
+      </p>
+      <p>
+        O TypeScript do início ao fim ajudou a manter consistência entre as regras do
+        programa no backend e o que a interface apresenta, evitando divergência nas
+        condições que definem se uma beneficiária está em situação regular no mês.
+      </p>
+
+      <h2>Aprendizados</h2>
+      <p>
+        Desenvolver para um programa social exige entender as regras antes do código: o que
+        conta como falta justificada, como um exame pendente afeta a participação, o que
+        acontece quando alguém conclui um curso. Trabalhar junto à Secretaria de Meio
+        Ambiente mostrou o quanto o levantamento de regras de negócio é a parte mais
+        determinante de um sistema desse tipo — a implementação vem depois e é a parte
+        fácil.
+      </p>
+
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>
+        <a href="../index.html">← Jonas Oliveira</a>
+        &nbsp;·&nbsp;
+        <a href="mailto:jonasbdc1998@gmail.com">jonasbdc1998@gmail.com</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

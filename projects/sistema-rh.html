@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sistema de gestão de pessoal e documentos digitalizados da Prefeitura de Bodocó — Node.js, TypeScript, Prisma, PostgreSQL, MongoDB e Cloudflare R2.">
+  <title>Sistema de Gestão de RH — Jonas Oliveira</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .project-page { max-width: 720px; margin: 0 auto; padding: 56px 24px 80px; }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-bottom: 40px;
+      transition: color var(--transition);
+    }
+    .back-link:hover { color: var(--accent); text-decoration: none; }
+    .project-header { margin-bottom: 40px; }
+    .project-page-icon { font-size: 2.4rem; margin-bottom: 16px; display: block; }
+    .project-page-title {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .project-page-summary {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+    .project-body { color: #bbb; line-height: 1.8; }
+    .project-body h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 36px 0 12px;
+    }
+    .project-body p { margin-bottom: 16px; }
+    .project-body ul { padding-left: 20px; margin-bottom: 16px; }
+    .project-body li { margin-bottom: 6px; }
+    .project-body a { color: var(--accent); }
+    .project-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; }
+    hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <span class="nav-logo">jonas<span>.</span></span>
+    </div>
+  </nav>
+
+  <div class="project-page">
+
+    <a class="back-link" href="../index.html#projects">← Voltar aos projetos</a>
+
+    <header class="project-header">
+      <span class="project-page-icon">🏛️</span>
+
+      <h1 class="project-page-title">Sistema de Gestão de RH</h1>
+
+      <p class="project-page-summary">
+        Sistema de gestão de pessoal e documentos digitalizados da Prefeitura Municipal
+        de Bodocó — PE, atendendo cerca de 960 servidores, com trilha de auditoria
+        completa de todas as ações realizadas no sistema.
+      </p>
+
+      <div class="project-meta tag-list">
+        <span class="tag">Node.js</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Prisma ORM</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">MongoDB</span>
+        <span class="tag">Cloudflare R2</span>
+      </div>
+    </header>
+
+    <hr>
+
+    <div class="project-body">
+
+      <h2>Sobre o projeto</h2>
+      <p>
+        O setor pessoal da Prefeitura trabalhava com cadastros dispersos em planilhas e
+        documentos em papel, o que tornava lenta qualquer consulta sobre a vida funcional
+        de um servidor. O sistema foi construído em conjunto com o diretor de TI do
+        município para centralizar esse cadastro, digitalizar os documentos e dar ao
+        próprio servidor acesso às suas informações.
+      </p>
+      <p>
+        Por lidar com dados pessoais de quase mil servidores, o requisito que mais pesou
+        na arquitetura foi a <strong>rastreabilidade</strong>: toda ação feita por um
+        usuário do sistema precisa ficar registrada, com autor, momento e o que mudou.
+      </p>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="../assets/sistema-rh-dashboard.png"
+               alt="Dashboard administrativo do Sistema RH com totais de funcionários ativos e inativos"
+               loading="lazy">
+          <figcaption>Dashboard administrativo — visão geral do quadro de pessoal, acesso rápido e retornos de afastamento da semana.</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/sistema-rh-portal.png"
+               alt="Tela de entrada do portal do servidor, com login por CPF"
+               loading="lazy">
+          <figcaption>Portal do servidor — acesso por CPF, login ou e-mail para consultar dados, documentos e avisos.</figcaption>
+        </figure>
+      </div>
+
+      <h2>O que foi desenvolvido</h2>
+      <ul>
+        <li>Cadastro de funcionários com situação funcional (ativos e inativos) e perfis de administrador com permissões distintas.</li>
+        <li>Gestão de documentos digitalizados por servidor, com upload e download controlados.</li>
+        <li>Controle de afastamentos, incluindo alerta dos retornos previstos para a semana.</li>
+        <li>Quadro de avisos e DTCs para comunicação com os servidores.</li>
+        <li>Histórico de alterações e estatísticas do quadro de pessoal.</li>
+        <li>Portal do servidor, com autenticação por CPF, login ou e-mail, para consulta dos próprios dados.</li>
+      </ul>
+
+      <h2>Tecnologias utilizadas</h2>
+      <p>
+        O backend é <strong>Node.js com TypeScript</strong>, usando <strong>Prisma ORM</strong>
+        sobre <strong>PostgreSQL</strong> — o dado de RH é fortemente relacional (servidor,
+        cargo, lotação, afastamento, documento) e se beneficia das garantias de integridade
+        e das migrações versionadas do Prisma.
+      </p>
+      <p>
+        A auditoria ficou em uma base separada de <strong>MongoDB</strong>. O log de ações dos
+        usuários é um fluxo append-only de alto volume, com formato que varia conforme o tipo
+        de evento; mantê-lo fora do PostgreSQL evita inflar o banco transacional e permite
+        registrar o payload de cada ação sem precisar de uma migração a cada novo tipo de evento.
+      </p>
+      <p>
+        Os documentos digitalizados são armazenados no <strong>Cloudflare R2</strong>, que
+        oferece API compatível com S3 sem cobrar taxa de egresso — relevante num sistema em
+        que os arquivos são baixados com frequência e o orçamento é público.
+      </p>
+
+      <h2>Aprendizados</h2>
+      <p>
+        O principal aprendizado foi projetar a persistência pensando no perfil de cada dado em
+        vez de empurrar tudo para um único banco: o relacional guarda o estado atual, o
+        documental guarda o histórico do que aconteceu. Também foi um exercício de levantar
+        requisitos diretamente com quem usa o sistema — o setor pessoal e o diretor de TI —
+        e traduzir rotinas que existiam só em papel para um fluxo digital que as pessoas
+        realmente conseguissem adotar.
+      </p>
+
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>
+        <a href="../index.html">← Jonas Oliveira</a>
+        &nbsp;·&nbsp;
+        <a href="mailto:jonasbdc1998@gmail.com">jonasbdc1998@gmail.com</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plataforma de cardápio digital para restaurantes — QR Code por mesa, comanda individual, delivery, estoque e montagem de pratos, com atualização em tempo real via WebSocket.">
+  <title>Cardápio Digital — Jonas Oliveira</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .project-page { max-width: 720px; margin: 0 auto; padding: 56px 24px 80px; }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-bottom: 40px;
+      transition: color var(--transition);
+    }
+    .back-link:hover { color: var(--accent); text-decoration: none; }
+    .project-header { margin-bottom: 40px; }
+    .project-page-icon { font-size: 2.4rem; margin-bottom: 16px; display: block; }
+    .project-page-title {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .project-page-summary {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+    .project-body { color: #bbb; line-height: 1.8; }
+    .project-body h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 36px 0 12px;
+    }
+    .project-body p { margin-bottom: 16px; }
+    .project-body ul { padding-left: 20px; margin-bottom: 16px; }
+    .project-body li { margin-bottom: 6px; }
+    .project-body a { color: var(--accent); }
+    .project-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; }
+    hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <span class="nav-logo">jonas<span>.</span></span>
+    </div>
+  </nav>
+
+  <div class="project-page">
+
+    <a class="back-link" href="../index.html#projects">← Voltar aos projetos</a>
+
+    <header class="project-header">
+      <span class="project-page-icon">🍽️</span>
+
+      <h1 class="project-page-title">Cardápio Digital</h1>
+
+      <p class="project-page-summary">
+        Plataforma de gestão para restaurantes: cardápio online com QR Code individual por
+        mesa, comanda por mesa e por pessoa, delivery, controle de estoque e montagem
+        personalizada de pratos — tudo sincronizado em tempo real.
+      </p>
+
+      <div class="project-meta tag-list">
+        <span class="tag">Node.js</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">React</span>
+        <span class="tag">Prisma ORM</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">WebSocket</span>
+        <span class="tag">Cloudflare R2</span>
+        <span class="tag">Resend</span>
+      </div>
+    </header>
+
+    <hr>
+
+    <div class="project-body">
+
+      <h2>Sobre o projeto</h2>
+      <p>
+        Projeto próprio, nascido de um problema comum em restaurantes: o pedido anotado no
+        papel se perde entre o salão, a cozinha e o caixa. Quando a mesa tem várias pessoas,
+        ninguém sabe ao certo quem pediu o quê, e a conta vira uma discussão no fim.
+      </p>
+      <p>
+        A plataforma substitui a comanda de papel por um cardápio acessível via QR Code
+        individual por mesa. Cada pessoa pede pelo próprio celular, o pedido entra
+        identificado por quem fez, e o status acompanha o prato até a entrega — com o mesmo
+        fluxo valendo também para delivery.
+      </p>
+
+      <div class="project-gallery">
+        <figure>
+          <img src="../assets/cardapio-pedidos.png"
+               alt="Painel de pedidos com filtros por canal, status e pagamento"
+               loading="lazy">
+          <figcaption>Painel de pedidos — filtros por canal (salão ou delivery), status do preparo e situação de pagamento.</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/cardapio-montagem.png"
+               alt="Editor de etapas de montagem de prato, com opções únicas e múltiplas"
+               loading="lazy">
+          <figcaption>Montagem personalizada — etapas com escolha única ou múltipla, limites de seleção, obrigatoriedade e preço extra por opção.</figcaption>
+        </figure>
+      </div>
+
+      <h2>O que foi desenvolvido</h2>
+      <ul>
+        <li>Gestão do cardápio, com categorias, itens, fotos, disponibilidade e preços.</li>
+        <li>QR Code individual por mesa, abrindo o cardápio já vinculado à mesa correta.</li>
+        <li>Comanda por mesa e por pessoa — cada item fica associado a quem pediu, facilitando a divisão da conta.</li>
+        <li>Montagem personalizada de pratos: etapas de escolha única ou múltipla, com limites, obrigatoriedade e preço extra por opção.</li>
+        <li>Delivery completo, com zonas de entrega, cadastro de entregadores e acompanhamento do pedido até a entrega.</li>
+        <li>Controle de estoque integrado ao consumo dos pedidos.</li>
+        <li>PDV e caixa, com controle de pagamentos (a receber e pago) por pedido.</li>
+        <li>Painel de pedidos com filtros por canal, status de preparo e situação de pagamento.</li>
+        <li>Confirmação por e-mail para cadastro de clientes e acompanhamento de pedidos.</li>
+      </ul>
+
+      <h2>Tecnologias utilizadas</h2>
+      <p>
+        Backend em <strong>Node.js com TypeScript</strong>, usando <strong>Prisma ORM</strong>
+        sobre <strong>PostgreSQL</strong>, e frontend em <strong>React</strong>. O modelo
+        relacional é essencial aqui: pedido, item, opções de montagem, mesa, pagamento e
+        movimentação de estoque formam uma cadeia em que uma inconsistência vira prejuízo
+        direto — por isso cada pedido é gravado em transação junto à baixa de estoque.
+      </p>
+      <p>
+        A camada de tempo real usa <strong>WebSocket</strong>. Cozinha, salão e caixa olham
+        para o mesmo pedido ao mesmo tempo, e cada mudança de status é empurrada para todos
+        os painéis conectados. Sem isso, o garçom descobriria que um prato ficou pronto
+        apenas no próximo recarregamento da página, que é exatamente o atraso que o sistema
+        se propõe a eliminar.
+      </p>
+      <p>
+        As imagens dos itens do cardápio ficam no <strong>Cloudflare R2</strong>, com API
+        compatível com S3 e sem taxa de egresso — as fotos são servidas a cada cliente que
+        abre o cardápio pelo QR Code, então o custo de saída seria o gargalo de qualquer
+        alternativa. A confirmação por e-mail é feita com o <strong>Resend</strong>,
+        escolhido por entregar autenticação de domínio e boa taxa de entrega sem exigir a
+        operação de um servidor de e-mail próprio.
+      </p>
+
+      <h2>Aprendizados</h2>
+      <p>
+        Modelar a montagem personalizada de pratos foi a parte mais interessante: era
+        preciso uma estrutura genérica o bastante para o restaurante criar qualquer etapa
+        (ponto da carne, molhos, adicionais) sem alterar código, mas que ainda assim
+        validasse as regras no servidor e calculasse o preço final corretamente. Também
+        aprendi na prática a lidar com estado compartilhado em tempo real: reconexão de
+        clientes, pedidos que mudam de status enquanto alguém está com a tela aberta, e
+        conciliação entre o que o painel mostra e o que está de fato no banco.
+      </p>
+
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>
+        <a href="../index.html">← Jonas Oliveira</a>
+        &nbsp;·&nbsp;
+        <a href="mailto:jonasbdc1998@gmail.com">jonasbdc1998@gmail.com</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

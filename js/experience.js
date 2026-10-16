@@ -22,12 +22,13 @@ const EXPERIENCES = [
     end: null,
     description: [
       "Desenvolvimento de sistemas internos para gestão de pessoas e análise de dados financeiros.",
+      "Sistema de Gestão de RH (~960 servidores, documentos digitalizados em Cloudflare R2 e auditoria em MongoDB) e sistema do Programa Florescer, em parceria com a Secretaria de Meio Ambiente.",
       "Backend com Python + FastAPI + Alembic e Node.js + TypeScript + Prisma ORM usando PostgreSQL e MongoDB.",
       "Análise e estruturação de dados municipais com Python, Pandas, NumPy e Plotly.",
       "Interfaces de suporte com React Web, HTML, CSS e JavaScript.",
       "Deploys em VPS privada utilizando Coolify e Dokploy.",
     ],
-    tags: ["Python", "FastAPI", "Node.js", "TypeScript", "Prisma", "PostgreSQL", "MongoDB", "Streamlit", "React", "Coolify"],
+    tags: ["Python", "FastAPI", "Node.js", "TypeScript", "Prisma", "PostgreSQL", "MongoDB", "Cloudflare R2", "Streamlit", "React", "Coolify"],
   },
   {
     role: "Analista de Dados",

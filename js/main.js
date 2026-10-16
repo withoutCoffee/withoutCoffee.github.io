@@ -80,21 +80,28 @@ function renderProjects() {
     const linkLabel = project.linkLabel || 'Ver projeto';
     const arrowIcon = isExternal ? '↗' : '→';
 
+    const cover = project.cover
+      ? `<img class="project-cover" src="${escHtml(project.cover)}" alt="${escHtml(project.coverAlt || project.title)}" loading="lazy">`
+      : '';
+
     return `
       <article class="project-card">
-        <div class="project-card-header">
-          <span class="project-icon">${project.icon || '💻'}</span>
-          <span class="project-link-icon">${isExternal ? '↗' : '⬡'}</span>
-        </div>
-        <h3 class="project-title">${escHtml(project.title)}</h3>
-        <p class="project-summary">${escHtml(project.summary)}</p>
-        <div class="project-footer">
-          <div class="project-tags">
-            ${(project.tags || []).map(t => `<span class="tag">${escHtml(t)}</span>`).join('')}
+        ${cover}
+        <div class="project-card-content">
+          <div class="project-card-header">
+            <span class="project-icon">${project.icon || '💻'}</span>
+            <span class="project-link-icon">${isExternal ? '↗' : '⬡'}</span>
           </div>
-          <a class="project-btn" href="${escHtml(project.link)}" ${externalAttr}>
-            ${escHtml(linkLabel)} <span>${arrowIcon}</span>
-          </a>
+          <h3 class="project-title">${escHtml(project.title)}</h3>
+          <p class="project-summary">${escHtml(project.summary)}</p>
+          <div class="project-footer">
+            <div class="project-tags">
+              ${(project.tags || []).map(t => `<span class="tag">${escHtml(t)}</span>`).join('')}
+            </div>
+            <a class="project-btn" href="${escHtml(project.link)}" ${externalAttr}>
+              ${escHtml(linkLabel)} <span>${arrowIcon}</span>
+            </a>
+          </div>
         </div>
       </article>`;
   }).join('');

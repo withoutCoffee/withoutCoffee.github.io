@@ -8,6 +8,8 @@
  *   title    — nome do projeto
  *   summary  — descrição curta (aparece no card)
  *   icon     — emoji ou ícone para o card
+ *   cover    — caminho da imagem de capa do card (opcional, ex: "assets/foo.png")
+ *   coverAlt — texto alternativo da capa (opcional, padrão: o título)
  *   tags     — array de tecnologias usadas
  *   link     — URL de destino do botão
  *   linkType — "page" (página interna em /projects/) ou "external" (link externo)
@@ -22,23 +24,37 @@
  */
 
 const PROJECTS = [
-  // Exemplo — remova ou edite quando tiver seus projetos reais:
-  // {
-  //   title: "Meu Projeto",
-  //   summary: "Breve descrição do que o projeto faz e qual problema resolve.",
-  //   icon: "🚀",
-  //   tags: ["Python", "FastAPI", "PostgreSQL"],
-  //   link: "projects/meu-projeto.html",
-  //   linkType: "page",
-  //   linkLabel: "Ver detalhes"
-  // },
-  // {
-  //   title: "Outro Projeto",
-  //   summary: "Descrição do projeto com link externo para GitHub ou deploy.",
-  //   icon: "📊",
-  //   tags: ["React", "Node.js"],
-  //   link: "https://github.com/withoutcoffee/outro-projeto",
-  //   linkType: "external",
-  //   linkLabel: "Ver no GitHub"
-  // },
+  {
+    title: "Sistema de Gestão de RH",
+    summary: "Sistema de gestão de pessoal e documentos digitalizados para a Prefeitura de Bodocó — cerca de 960 servidores, com trilha de auditoria completa.",
+    icon: "🏛️",
+    cover: "assets/sistema-rh-dashboard.png",
+    coverAlt: "Dashboard do Sistema RH com os totais de funcionários do município",
+    tags: ["Node.js", "TypeScript", "Prisma ORM", "PostgreSQL", "MongoDB", "Cloudflare R2"],
+    link: "projects/sistema-rh.html",
+    linkType: "page",
+    linkLabel: "Ver detalhes",
+  },
+  {
+    title: "Programa Florescer",
+    summary: "Acompanhamento de frequência, serviço comunitário, saúde e formação profissional das beneficiárias do programa social de Bodocó.",
+    icon: "🌻",
+    cover: "assets/florescer-home.png",
+    coverAlt: "Página inicial do Programa Florescer",
+    tags: ["Node.js", "TypeScript", "React", "Prisma ORM", "PostgreSQL"],
+    link: "projects/florescer.html",
+    linkType: "page",
+    linkLabel: "Ver detalhes",
+  },
+  {
+    title: "Cardápio Digital",
+    summary: "Plataforma para restaurantes: QR Code por mesa, comanda individual, delivery, estoque e montagem personalizada de pratos em tempo real.",
+    icon: "🍽️",
+    cover: "assets/cardapio-pedidos.png",
+    coverAlt: "Painel de pedidos do Cardápio Digital, com filtros por canal e status",
+    tags: ["Node.js", "TypeScript", "React", "Prisma ORM", "PostgreSQL", "WebSocket", "Cloudflare R2", "Resend"],
+    link: "projects/cardapio-digital.html",
+    linkType: "page",
+    linkLabel: "Ver detalhes",
+  },
 ];
